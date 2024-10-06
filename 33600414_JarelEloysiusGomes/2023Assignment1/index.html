@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>FIT2102 A1 2023</title>
+    <!-- Add the YouTube iFrame API script -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </head>
+  <body>
+    <h1>Tetris</h1>
+    <main id="main" class="flex row">
+      <svg id="svgCanvas">
+        <!-- game over text box -->
+        <g id="gameOver" visibility="hidden">
+          <!-- Background rectangle -->
+          <rect x="26" y="120" fill="white" height="48" width="149"></rect>
+          <!-- Text "Game Over" -->
+          <text x="36" y="150">Game Over</text>
+          <!-- Background rectangle for "Press R to Restart" -->
+          <rect x="20" y="230" width="140" height="20" fill="black" />
+          <!-- Text "Press R to Restart" -->
+          <text x="36" y="250" font-size="14" fill="yellow">Press "R" to Restart</text>
+        </g>
+      </svg>
+      <div id="sideBar" class="flex col">
+        <svg id="svgPreview" width="40" height="40"></svg>
+        <div id="info" class="flex col">
+          <div class="text">
+            <span class="left">Level: </span>
+            <span class="right" id="levelText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Score: </span>
+            <span class="right" id="scoreText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Highscore: </span>
+            <span class="right" id="highScoreText">...</span>
+          </div>
+        </div>
+        <div id="messageContainer">
+          <p id="goldTetriminoMessage"></p>
+        </div>
+        <div id="nextPiecePreview"></div>
+        <div id="controls">
+          <button id="startButton">Start</button>
+          <button id="pauseButton">Pause</button>
+          <button id="resetButton">Reset</button>
+      </div>
+    </main>
+    <!-- Embed the YouTube livestream video -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/rUxyKA_-grg?autoplay=1"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
